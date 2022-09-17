@@ -1,4 +1,4 @@
-package strategy.models.service;
+package strategy.service;
 
 public class Squeak implements QuackBehavior{
     public void quack(){

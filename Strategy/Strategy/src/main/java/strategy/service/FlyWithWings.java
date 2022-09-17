@@ -1,4 +1,4 @@
-package strategy.models.service;
+package strategy.service;
 
 public class FlyWithWings implements FlyBehavior{
     public void fly(){

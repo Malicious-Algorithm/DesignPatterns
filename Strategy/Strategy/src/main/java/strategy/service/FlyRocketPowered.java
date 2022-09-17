@@ -1,4 +1,4 @@
-package strategy.models.service;
+package strategy.service;
 
 public class FlyRocketPowered implements FlyBehavior{
     public void fly(){
