@@ -1,7 +1,7 @@
 package strategy.models;
 
-import strategy.models.service.FlyWithWings;
-import strategy.models.service.Quack;
+import strategy.service.FlyWithWings;
+import strategy.service.Quack;
 
 public class MallardDuck extends Duck{
 

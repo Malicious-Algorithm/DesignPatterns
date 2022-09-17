@@ -1,7 +1,7 @@
 package strategy.models;
 
-import strategy.models.service.FlyBehavior;
-import strategy.models.service.QuackBehavior;
+import strategy.service.FlyBehavior;
+import strategy.service.QuackBehavior;
 
 public abstract class Duck {
     QuackBehavior quackBehavior;

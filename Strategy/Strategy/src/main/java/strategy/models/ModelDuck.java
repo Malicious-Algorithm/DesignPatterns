@@ -1,7 +1,7 @@
 package strategy.models;
 
-import strategy.models.service.FlyNoWay;
-import strategy.models.service.Quack;
+import strategy.service.FlyNoWay;
+import strategy.service.Quack;
 
 public class ModelDuck extends Duck{
     public ModelDuck(){
