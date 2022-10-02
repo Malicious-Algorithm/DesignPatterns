@@ -1,10 +1,16 @@
 package factory.models;
 
 public class Pizza {
+    SimplePizzaFactory factory;
 
-    public Pizza orderPizza(){
+    public Pizza(){}
+
+    public Pizza(SimplePizzaFactory factory){
+        this.factory = factory;
+    }
+
+    public Pizza orderPizza() {
         Pizza pizza = new Pizza();
-
         pizza.prepare();
         pizza.bake();
         pizza.cut();
@@ -13,15 +19,12 @@ public class Pizza {
     }
 
     public Pizza orderPizza(String type) {
-        Pizza pizza = new Pizza();
-
-        if (type.equals("cheese")) {
-            pizza = new CheesePizza();
-        } else if (type.equals("greek")) {
-            pizza = new GreekPizza();
-        } else if (type.equals("pepperoni")) {
-            pizza = new PepperoniPizza();
-        }
+        Pizza pizza;
+        pizza = factory.createPizza(type);
+        pizza.prepare();
+        pizza.bake();
+        pizza.cut();
+        pizza.box();
         return pizza;
     }
 
