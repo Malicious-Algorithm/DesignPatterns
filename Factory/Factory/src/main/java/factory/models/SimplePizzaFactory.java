@@ -1,8 +1,9 @@
 package factory.models;
 
 public class SimplePizzaFactory {
-    public Pizza createPizza(String type){
-        Pizza pizza = null;
+    /*
+    public PizzaStore createPizza(String type){
+        PizzaStore pizza = null;
 
         if (type.equals("cheese")) {
             pizza = new CheesePizza();
@@ -13,4 +14,6 @@ public class SimplePizzaFactory {
         }
         return pizza;
     }
+
+     */
 }

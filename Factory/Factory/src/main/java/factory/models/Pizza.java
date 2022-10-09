@@ -1,46 +1,47 @@
 package factory.models;
 
-public class Pizza {
-    SimplePizzaFactory factory;
+import java.util.ArrayList;
 
-    public Pizza(){}
+public abstract class Pizza {
 
-    public Pizza(SimplePizzaFactory factory){
-        this.factory = factory;
-    }
-
-    public Pizza orderPizza() {
-        Pizza pizza = new Pizza();
-        pizza.prepare();
-        pizza.bake();
-        pizza.cut();
-        pizza.box();
-        return pizza;
-    }
-
-    public Pizza orderPizza(String type) {
-        Pizza pizza;
-        pizza = factory.createPizza(type);
-        pizza.prepare();
-        pizza.bake();
-        pizza.cut();
-        pizza.box();
-        return pizza;
-    }
+    public String name;
+    public String dough;
+    public String sauce;
+    public ArrayList<String> toppings = new ArrayList<String>();
 
     void prepare(){
-        System.out.println("preparing pizza");
+        System.out.println("Preparing " + name);
+        System.out.println("Tossing dough " + dough);
+        System.out.println("Adding sauce " + sauce);
+        System.out.println("Adding toppings " );
+        for (String topping : toppings){
+            System.out.println(" " + topping);
+        }
     }
 
-    void bake(){
-        System.out.println("baking pizza");
+    public void bake(){
+        System.out.println("Baking pizza for 25 mins");
     }
 
-    void cut(){
-        System.out.println("cutting pizza into peaces");
+    public void cut(){
+        System.out.println("Cutting pizza into diagonal slices");
     }
 
-    void box(){
-        System.out.println("putting the pizza in a box");
+    public void box(){
+        System.out.println("Putting the pizza in a official PizzaStore box");
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String toString() {
+        return "Pizza{" +
+                "name='" + name + '\'' +
+                ", dough='" + dough + '\'' +
+                ", sauce='" + sauce + '\'' +
+                ", toppings=" + toppings +
+                '}';
     }
 }
